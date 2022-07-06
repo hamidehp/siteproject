@@ -14,6 +14,8 @@ import { FavoriteProductsComponent } from './pages/home/favorite-products/favori
 import { LatestNewsComponent } from './pages/home/latest-news/latest-news.component';
 import { BrandsComponent } from './pages/home/brands/brands.component';
 import { FormsModule } from '@angular/forms';
+import { SliderService } from './services/slider.service';
+import { HttpClientModule } from '@Angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,9 +32,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule
+    AppRoutingModule,FormsModule,HttpClientModule,
   ],
-  providers: [],
+  providers: [SliderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
