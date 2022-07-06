@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-home-specialproducts',
   templateUrl: './specialproducts.component.html',
-  styleUrls: ['./specialproducts.component.css']
+  styleUrls: ['./specialproducts.component.scss']
 })
 export class SpecialproductsComponent implements OnInit {
 
