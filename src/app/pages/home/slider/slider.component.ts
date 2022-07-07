@@ -1,3 +1,7 @@
+import { HomeSliderResponse } from './../../../DTOs/HomeSliderResponse';
+import { Data } from '@angular/router';
+import { SliderService } from './../../../services/slider.service';
+import { Slider } from './../../../DTOs/Slider';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +10,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-
-  constructor() { }
+  private Sliders:Slider[]=[];
+  constructor(
+    private SliderService:SliderService
+  ) { }
 
   ngOnInit(): void {
+   // this.SliderService.getCurrentSliders().subscribe(Sliders =>{
+
+   // if (this.Sliders==null)
+  //{
+    this.SliderService.getSliders().subscribe(data=> this.Sliders);
+  //  }
+ // else{
+  //  this.Sliders=Sliders;
+  //}
+ // });
   }
 
 }

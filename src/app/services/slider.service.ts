@@ -11,15 +11,21 @@ import { Slider } from '../DTOs/Slider';
   providedIn: 'root'
 })
 export class SliderService {
-  private homeSlider :BehaviorSubject<Slider[]> =new BehaviorSubject<Slider[]>([])
+ // private homeSlider:BehaviorSubject<Slider[]> =new BehaviorSubject<Slider[]>([])
+  
   constructor( private http:HttpClient) { }
+  
   public getSliders():Observable<HomeSliderResponse>{
-    return this.http.get<HomeSliderResponse>('/sliders');
+    return this.http.get<HomeSliderResponse>('https://localhost:44390/api/Sliders');
   }
 
-  public getCurrentSliders():Observable<Slider[]>{
-    return this.homeSlider;
-  }
+  //public getCurrentSliders():Observable<Slider[]>{
+   // return this.homeSlider;
+  //}
+
+  //public SetCurrentSliders(Sliders:Slider[]){
+   //return this.homeSlider.next(Sliders);
+  //}
 }
 
 
