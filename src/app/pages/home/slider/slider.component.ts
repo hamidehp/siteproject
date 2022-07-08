@@ -10,22 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slider.component.scss']
 })
 export class SliderComponent implements OnInit {
-  private Sliders:Slider[]=[];
-  constructor(
-    private SliderService:SliderService
-  ) { }
+  
+   Sliders:Slider[]=[];
+  
+  constructor(private SliderService:SliderService ) { }
 
   ngOnInit(): void {
    // this.SliderService.getCurrentSliders().subscribe(Sliders =>{
 
    // if (this.Sliders==null)
   //{
-    this.SliderService.getSliders().subscribe(data=> this.Sliders);
+   this.SliderService.getSliders().subscribe(data=> this.Sliders=data );
   //  }
  // else{
   //  this.Sliders=Sliders;
   //}
  // });
+ 
+ 
   }
 
 }

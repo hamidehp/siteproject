@@ -17,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import { SliderService } from './services/slider.service';
 import { HttpClientModule } from '@Angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
