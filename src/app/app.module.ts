@@ -16,6 +16,8 @@ import { BrandsComponent } from './pages/home/brands/brands.component';
 import { FormsModule } from '@angular/forms';
 import { SliderService } from './services/slider.service';
 import { HttpClientModule } from '@Angular/common/http';
+import { AboutUsComponent } from './pages/about-us/about-us.component';
+import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { HttpClientModule } from '@Angular/common/http';
     NewproductsComponent,
     FavoriteProductsComponent,
     LatestNewsComponent,
-    BrandsComponent
+    BrandsComponent,
+    AboutUsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,

@@ -13,19 +13,21 @@ export class SliderComponent implements OnInit {
   
    Sliders:Slider[]=[];
   
-  constructor(private SliderService:SliderService ) { }
+  constructor(
+   // private SliderService:SliderService 
+    ) { }
 
   ngOnInit(): void {
-    this.SliderService.getCurrentSliders().subscribe(Sliders =>{
+  //  this.SliderService.getCurrentSliders().subscribe(Sliders =>{
 
-    if (this.Sliders==null)
-  {
-   this.SliderService.getSliders().subscribe(data=> this.Sliders=data );
-    }
-  else{
-    this.Sliders=Sliders;
-  }
-  });
+    //if (this.Sliders==null)
+  //{
+   //this.SliderService.getSliders().subscribe(data=> this.Sliders=data );
+    //}
+  //else{
+    //this.Sliders=Sliders;
+ // }
+  //});
  
  
   }

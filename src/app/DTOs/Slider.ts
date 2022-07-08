@@ -1,14 +1,15 @@
 import { DeclarationListEmitMode } from "@angular/compiler";
 
 export class Slider {
-    constructor (id :number,
-        isDelete: boolean  ,
-        createDate :Date ,
-        lastUpdateDate:Date,
-        title:string ,
-        description:string,
-        link:string,
-        imageName:string){
+    constructor (
+        public id :number,
+        public isDelete: boolean  ,
+        public createDate :Date ,
+        public lastUpdateDate:Date,
+        public title:string ,
+        public description:string,
+        public link:string,
+        public imageName:string){
 
     }
 }
