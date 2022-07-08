@@ -16,16 +16,16 @@ export class SliderComponent implements OnInit {
   constructor(private SliderService:SliderService ) { }
 
   ngOnInit(): void {
-   // this.SliderService.getCurrentSliders().subscribe(Sliders =>{
+    this.SliderService.getCurrentSliders().subscribe(Sliders =>{
 
-   // if (this.Sliders==null)
-  //{
+    if (this.Sliders==null)
+  {
    this.SliderService.getSliders().subscribe(data=> this.Sliders=data );
-  //  }
- // else{
-  //  this.Sliders=Sliders;
-  //}
- // });
+    }
+  else{
+    this.Sliders=Sliders;
+  }
+  });
  
  
   }
