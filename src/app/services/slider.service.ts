@@ -13,26 +13,30 @@ providedIn: 'root'
 })
 export class SliderService {
   
-  private homeSlider:BehaviorSubject<Slider[]> =new BehaviorSubject<Slider[]>([])
-  private url:string='https://localhost:44390/api/Sliders';
-  constructor( private http:HttpClient) { }
+  //private homeSlider:BehaviorSubject<Slider[]> =new BehaviorSubject<Slider[]>([])
+  public url:string='https://localhost:44390/api/Sliders';
+  constructor( public http:HttpClient) { }
   
-  public getSliders():Observable<HomeSliderResponse[]>{
+  // public getSliders():Observable<any>{
   
     
-    return this.http.get<HomeSliderResponse[]>(this.url);
+  //   return this.http.get<any[]>("https://localhost:44390/api/Sliders").subscribe(
+  //     (success)=>{
+        
+  //     }
+  //   );
     
-  }
+  // }
   
   
   
-  public getCurrentSliders():Observable<Slider[]>{
-    return this.homeSlider;
-  }
+ // public getCurrentSliders():Observable<Slider[]>{
+ //   return this.homeSlider;
+  //}
 
-  public SetCurrentSliders(Sliders:Slider[]){
-  return this.homeSlider.next(Sliders);
-  }
+  //public SetCurrentSliders(Sliders:Slider[]){
+  //return this.homeSlider.next(Sliders);
+  //}
 }
 
 
